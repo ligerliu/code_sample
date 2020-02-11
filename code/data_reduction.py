@@ -19,6 +19,8 @@ class proc:
         '''
         dd = self.im.flatten()
         qd  = self.Qmap.flatten()
+        qd = qd[np.isnan(dd)==0]
+        dd = dd[np.isnan(dd)==0]
         bins = np.append([2*q[0]-q[1]],q)
         bins += np.append(q,[2*q[-1]-q[-2]])
         bins *= 0.5

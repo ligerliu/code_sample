@@ -22,7 +22,7 @@ class Coord:
         self.wavelength = wavelength
         self.pixel_size = pixel_size
         self.Dd         = detector_distance
-        self.Y,self.X = np.meshgrid(np.arange(self.X_size)+0.5,
+        self.X,self.Y = np.meshgrid(np.arange(self.X_size)+0.5,
                                     np.arange(self.Y_size)+0.5)
         self.X -= self.bm_centrx
         self.Y -= self.bm_centry

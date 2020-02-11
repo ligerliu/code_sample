@@ -16,17 +16,19 @@ class data_show:
         log scale and value limits were applied as well
         '''
         if log:
-            self.im = np.log(self.d.im)
+            self.im = self.d.im
+            self.im[self.im<=0] = np.nan
+            self.im = np.log(self.im)
             self.vmin = np.log(vmin)
             self.vmax = np.log(vmax)
         else:
-            self.im = im
+            self.im = self.d.im
             self.vmin = vmin
             self.vmax = vmax
         Qxmin = np.min(self.exp.Qx)
         Qxmax = np.max(self.exp.Qx)
-        Qymin = np.min(self.exp.Qy)
-        Qymax = np.max(self.exp.Qy)
+        Qymin = np.min(-self.exp.Qy)
+        Qymax = np.max(-self.exp.Qy)
         plt.subplots()
         plt.imshow(self.im,vmin=self.vmin,vmax=self.vmax,cmap='jet',
                    extent=(Qxmin,Qxmax,Qymin,Qymax))

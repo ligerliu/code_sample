@@ -23,8 +23,8 @@ class ExpConfig(Coord):
                 ):
         super().__init__(im_x=im_x,
                          im_y=im_y,
-                         center_x=center_y,
-                         center_y=center_x,
+                         center_x=center_x,
+                         center_y=center_y,
                          wavelength=wavelength,
                          pixel_size=pixel_size,
                          detector_distance=detector_distance,)
