@@ -1,0 +1,4 @@
+data reduction
+==============
+.. automodule:: data_reduction
+   :members:

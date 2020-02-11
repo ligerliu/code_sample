@@ -10,6 +10,7 @@ Welcome to code_sample's documentation!
    :maxdepth: 2 
    
    contents
+   example
 
 
 Indices and tables
