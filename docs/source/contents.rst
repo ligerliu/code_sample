@@ -1,12 +1,13 @@
 =====
-intro
+Intro
 =====
 
 this is code sample for exhibiting the coding ability
+example code could find and run in code folder
 
 .. code-block:: python
 
-   import code_sample
+   python test_run.py
 
 =========
 Functions

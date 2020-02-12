@@ -30,9 +30,19 @@ class Coord:
         self.Qy = 2*np.pi*np.arcsin(self.Y*self.pixel_size*1e-6/self.Dd)/self.wavelength
     
     def real(self):
+        '''
+        return
+        ------
+        real space coordinate
+        '''
         #R is distance to the image center in pixel
         self.R = np.sqrt(self.X**2+self.Y**2)
     
     def reciprocal(self):
+        '''
+        return
+        ------
+        reciprocal space coordinate
+        '''
         #Q is distance to the image center in reciprocal space
         self.Q = np.sqrt(self.Qx**2+self.Qy**2)

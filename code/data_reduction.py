@@ -1,22 +1,30 @@
 import numpy as np
 
 class proc:
-    '''
+    """
     circularlt averaging 2D data to 1D intensity profile
-    '''
+    Parameters
+    ------
+    im: 2D image, diffraction patter
+    exp: experiment configuration and perform correlated coordinate for data reduction
+    """
     def __init__(self,im,exp):
-        '''
-        im is collected diffraction patter
-        exp is a class including experiment configuration 
-        and correlated coordinate for data reduction
-        '''
         self.im   = np.copy(im).astype(float)
         self.Qmap = exp.Q
     
     def data1d(self,q):
-        '''
-        q is a numpy array determine the interested q range
-        '''
+        """
+        function process circularly averaging of 
+        2D diffraction pattern to 1D intensity profile
+        
+        Parameters
+        ----------
+        q: a 1D numpy array determine the interested q range
+        
+        Returns
+        -------
+        Iq: 1D intensity profile
+        """
         dd = self.im.flatten()
         qd  = self.Qmap.flatten()
         qd = qd[np.isnan(dd)==0]
