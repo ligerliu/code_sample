@@ -4,4 +4,4 @@ python = 36.
 numpy, matplotlib, scikit-image.
 
 detail info could be find:
-https://ligerliu.github.io/code_sample/
+https://ligerliu.github.io/code_sample/html/
